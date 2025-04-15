@@ -1,0 +1,34 @@
+:root {
+    --cor-primaria: #0000FF;
+    --cor-secundaria: #219B9D;
+    --background-color: #f0f4ff;
+    --cor-texto: #1a237e;
+    --cor-borda: rgba(0, 0, 255, 0.1);
+    --sombra-suave: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --sombra-destaque: 0 8px 15px rgba(0, 0, 255, 0.1);
+    --fonte: 'Lato', sans-serif;
+
+    --anexo-1: #1a237e;
+    --anexo-1-hover: #283593;
+    --anexo-2: #1976d2;
+    --anexo-2-hover: #2196f3;
+    --anexo-3: #219B9D;
+    --anexo-3-hover: #26c6da;
+    --anexo-4: #4fc3f7;
+    --anexo-4-hover: #81d4fa;
+    --anexo-5: #0d47a1;
+    --anexo-5-hover: #1565c0;
+
+    --faixa-1: #1a237e;
+    --faixa-1-hover: #283593;
+    --faixa-2: #1976d2;
+    --faixa-2-hover: #2196f3;
+    --faixa-3: #219B9D;
+    --faixa-3-hover: #26c6da;
+    --faixa-4: #4fc3f7;
+    --faixa-4-hover: #81d4fa;
+    --faixa-5: #0d47a1;
+    --faixa-5-hover: #1565c0;
+    --faixa-6: #1a237e;
+    --faixa-6-hover: #283593;
+} 

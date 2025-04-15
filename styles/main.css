@@ -1,0 +1,496 @@
+body {
+    background-color: var(--background-color);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte);
+}
+
+.titulo {
+    color: var(--cor-primaria);
+    font-weight: 500;
+}
+
+.bi {
+    margin-right: 8px;
+    font-size: 1.1em;
+    vertical-align: middle;
+    color: var(--cor-primaria);
+}
+
+.subtitulo {
+    color: var(--background-color);
+    font-weight: bold;
+    font-size: 14px;
+    background: linear-gradient(to right, #0000FF 90%, transparent);
+    padding: 10px 10px;
+    width: auto;
+    margin-top:20px;
+    margin-bottom: 20px;
+    position: relative;
+    border-left: 5px solid #0000FF; 
+    transition: 0.5s all;
+}
+
+.subtitulo:hover {
+    text-shadow: 0 0 5px #f0f4ff, 
+                0 0 20px #f0f4ff, 
+                0 0 50px #f0f4ff, 
+                0 0 100px #1a237e !important
+}
+
+.cartao {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-destaque);
+}
+
+.cabecalho-cartao {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    border-radius: 12px 12px 0 0 !important;
+}
+
+.cabecalho-cartao h2 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-input {
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    height: 56px;
+    box-sizing: border-box;
+    background: #ffffff;
+    cursor: pointer;
+    text-align: right;
+}
+
+.campo-input:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 255, 0.25);
+}
+
+.btn-anexo {
+    padding: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 2px solid #e0e0e0;
+    background-color: white;
+    color: #333;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn-anexo:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-destaque);
+}
+
+.btn-anexo.ativo {
+    color: white !important;
+    border-color: transparent !important;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-destaque);
+}
+
+.btn-anexo[data-anexo="1"] {
+    border-color: var(--anexo-1);
+    color: var(--anexo-1);
+}
+
+.btn-anexo[data-anexo="1"]:hover,
+.btn-anexo[data-anexo="1"].ativo {
+    background-color: var(--anexo-1);
+    color: white;
+}
+
+.btn-anexo[data-anexo="2"] {
+    border-color: var(--anexo-2);
+    color: var(--anexo-2);
+}
+
+.btn-anexo[data-anexo="2"]:hover,
+.btn-anexo[data-anexo="2"].ativo {
+    background-color: var(--anexo-2);
+    color: white;
+}
+
+.btn-anexo[data-anexo="3"] {
+    border-color: var(--anexo-3);
+    color: var(--anexo-3);
+}
+
+.btn-anexo[data-anexo="3"]:hover,
+.btn-anexo[data-anexo="3"].ativo {
+    background-color: var(--anexo-3);
+    color: white;
+}
+
+.btn-anexo[data-anexo="4"] {
+    border-color: var(--anexo-4);
+    color: var(--anexo-4);
+}
+
+.btn-anexo[data-anexo="4"]:hover,
+.btn-anexo[data-anexo="4"].ativo {
+    background-color: var(--anexo-4);
+    color: white;
+}
+
+.btn-anexo[data-anexo="5"] {
+    border-color: var(--anexo-5);
+    color: var(--anexo-5);
+}
+
+.btn-anexo[data-anexo="5"]:hover,
+.btn-anexo[data-anexo="5"].ativo {
+    background-color: var(--anexo-5);
+    color: white;
+}
+
+.btn-faixa {
+    padding: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 2px solid #e0e0e0;
+    background-color: white;
+    color: #333;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn-faixa:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-destaque);
+}
+
+.btn-faixa.ativo {
+    color: white !important;
+    border-color: transparent !important;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-destaque);
+}
+
+.btn-faixa[data-faixa="1"] {
+    border-color: var(--faixa-1);
+    color: var(--faixa-1);
+}
+
+.btn-faixa[data-faixa="1"]:hover,
+.btn-faixa[data-faixa="1"].ativo {
+    background-color: var(--faixa-1);
+    color: white;
+}
+
+.btn-faixa[data-faixa="2"] {
+    border-color: var(--faixa-2);
+    color: var(--faixa-2);
+}
+
+.btn-faixa[data-faixa="2"]:hover,
+.btn-faixa[data-faixa="2"].ativo {
+    background-color: var(--faixa-2);
+    color: white;
+}
+
+.btn-faixa[data-faixa="3"] {
+    border-color: var(--faixa-3);
+    color: var(--faixa-3);
+}
+
+.btn-faixa[data-faixa="3"]:hover,
+.btn-faixa[data-faixa="3"].ativo {
+    background-color: var(--faixa-3);
+    color: white;
+}
+
+.btn-faixa[data-faixa="4"] {
+    border-color: var(--faixa-4);
+    color: var(--faixa-4);
+}
+
+.btn-faixa[data-faixa="4"]:hover,
+.btn-faixa[data-faixa="4"].ativo {
+    background-color: var(--faixa-4);
+    color: var(--cor-texto);
+}
+
+.btn-faixa[data-faixa="5"] {
+    border-color: var(--faixa-5);
+    color: var(--faixa-5);
+}
+
+.btn-faixa[data-faixa="5"]:hover,
+.btn-faixa[data-faixa="5"].ativo {
+    background-color: var(--faixa-5);
+    color: white;
+}
+
+.btn-faixa[data-faixa="6"] {
+    border-color: var(--faixa-6);
+    color: var(--faixa-6);
+}
+
+.btn-faixa[data-faixa="6"]:hover,
+.btn-faixa[data-faixa="6"].ativo {
+    background-color: var(--faixa-6);
+    color: white;
+}
+
+select.campo-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--cor-texto);
+    margin-bottom: 0.5rem;
+}
+
+.grade-impostos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.grade-impostos .row {
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+}
+
+.grade-impostos .col-4, 
+.grade-impostos .col-8 {
+    display: flex;
+    padding: 0 0.25rem;
+}
+
+.grade-impostos [class^="col-"] > div {
+    padding: 0.75rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto-imposto {
+    font-weight: 500;
+    color: var(--cor-texto);
+    background-color: rgba(0, 0, 255, 0.05) !important;
+    border-radius: 6px;
+    height: 56px;
+    min-height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid var(--cor-borda);
+}
+
+.iss-imposto {
+    font-weight: 500;
+    color: var(--cor-texto);
+    background-color: rgba(0, 0, 255, 0.05) !important;
+    border-radius: 6px;
+    height: 56px;
+    min-height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid var(--cor-borda);
+}
+
+.grade-impostos .col-8 > div {
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+    background-color: #ffffff;
+    height: 56px;
+}
+
+.resultados {
+    background-color: rgba(0, 0, 255, 0.03);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: auto;
+    border: 1px solid var(--cor-borda);
+}
+
+.resultados span.fw-bold {
+    color: var(--cor-primaria);
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.secao-total {
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.secao-total > div {
+    background-color: rgba(0, 0, 255, 0.05);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border-top: 2px solid var(--cor-primaria);
+}
+
+.secao-total .fw-bold {
+    color: var(--cor-primaria);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.fw-bold {
+    color: var(--cor-texto);
+}
+
+@media (max-width: 991.98px) {
+    .cartao {
+        margin-bottom: 0.75rem;
+    }
+    
+    .card-body {
+        padding: 0.75rem;
+    }
+    
+    .cabecalho-cartao {
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .cabecalho-cartao h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cartao {
+        margin-bottom: 1rem;
+    }
+    
+    .card-body {
+        padding: 0.5rem;
+    }
+    
+    .campo-input {
+        height: 42px;
+        padding: 6px 10px;
+    }
+    
+    .form-label {
+        font-size: 0.85rem;
+    }
+    
+    .titulo {
+        font-size: 1.8rem;
+    }
+    
+    .subtitulo {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para o sistema de notificações */
+.notificacao {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--sombra-suave);
+    animation: slideIn 0.3s ease-in-out;
+    z-index: 1000;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.notificacao i {
+    font-size: 1.2rem;
+}
+
+.notificacao-erro {
+    background-color: #fee2e2;
+    border: 1px solid #ef4444;
+    color: #991b1b;
+}
+
+.notificacao-sucesso {
+    background-color: #dcfce7;
+    border: 1px solid #22c55e;
+    color: #166534;
+}
+
+.notificacao-info {
+    background-color: #dbeafe;
+    border: 1px solid #3b82f6;
+    color: #1e40af;
+}
+
+.notificacao-fechar {
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 5px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.notificacao-fechar:hover {
+    opacity: 1;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+} 

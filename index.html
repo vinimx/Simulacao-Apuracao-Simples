@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <title>Simulação de apuração do Simples Nacional</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg barra-navegacao">
+        <div class="container">
+            <a class="navbar-brand marca" href="#">
+                <img src="/img/logo.png" alt="Logo" class="img-fluid" width="100">
+            </a>
+            <button class="navbar-toggler botao-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse menu-colapso" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto menu-navegacao">
+                    <a class="nav-link item-menu ativo" aria-current="page" href="https://www.ranicont.com.br/index.php"><i class="bi bi-house-door"></i> Home</a>
+                    <a class="nav-link item-menu" href="https://www.ranicont.com.br/empresa.php"><i class="bi bi-building"></i> Empresa</a>
+                    <a class="nav-link item-menu" href="https://www.ranicont.com.br/servicos.php"><i class="bi bi-gear"></i> Serviços</a>
+                    <a class="nav-link item-menu" href="https://www.ranicont.com.br/consultas.php"><i class="bi bi-search"></i> Consultas</a>
+                    <a class="nav-link item-menu" href="https://www.ranicont.com.br/contato.php"><i class="bi bi-envelope"></i> Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+        <header class="text-center mt-2">
+            <h1 class="display-5 titulo">SIMULAÇÃO DE APURAÇÃO</h1>
+            <p class="lead text-center subtitulo"><i class="bi bi-building"></i> Simulador de apuração do Simples Nacional</p>
+        </header>
+    </div>
+
+    <div class="container py-4">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="cartao h-100 formulario-anexo">
+                    <div class="cabecalho-cartao">
+                        <h2 class="h5 mb-0 titulo-anexo"><i class="bi bi-file-text"></i> Em qual anexo a empresa se enquadra?</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-grid gap-3">
+                            <button class="btn btn-anexo" data-anexo="1">Anexo I</button>
+                            <button class="btn btn-anexo" data-anexo="2">Anexo II</button>
+                            <button class="btn btn-anexo" data-anexo="3">Anexo III</button>
+                            <button class="btn btn-anexo" data-anexo="4">Anexo IV</button>
+                            <button class="btn btn-anexo" data-anexo="5">Anexo V</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6">
+                <div class="cartao h-100">
+                    <div class="cabecalho-cartao">
+                        <h2 class="h5 mb-0"><i class="bi bi-bar-chart"></i> Em qual faixa de faturamento a empresa se enquadra?</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-grid gap-3">
+                            <button class="btn btn-faixa" data-faixa="1">Faixa 1</button>
+                            <button class="btn btn-faixa" data-faixa="2">Faixa 2</button>
+                            <button class="btn btn-faixa" data-faixa="3">Faixa 3</button>
+                            <button class="btn btn-faixa" data-faixa="4">Faixa 4</button>
+                            <button class="btn btn-faixa" data-faixa="5">Faixa 5</button>
+                            <button class="btn btn-faixa" data-faixa="6">Faixa 6</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6">
+                <div class="cartao h-100" id="receita">
+                    <div class="cabecalho-cartao">
+                        <h2 class="h5 mb-0"><i class="bi bi-currency-dollar"></i> Receita</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="receitaBruta" class="form-label"><i class="bi bi-calendar3"></i> Receita Bruta dos últimos 12 meses</label>
+                            <input type="text" class="form-control campo-input" inputmode="numeric" id="receitaBruta" placeholder="Digite a receita bruta dos últimos 12 meses" step="0.01">
+                            <label for="receitaMes" class="form-label mt-3"><i class="bi bi-calendar2"></i> Receita do mês</label>
+                            <input type="text" class="form-control campo-input" inputmode="numeric" id="receitaMes" placeholder="Digite a receita do mês atual" step="0.01">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6">
+                <div class="cartao h-100">
+                    <div class="cabecalho-cartao">
+                        <h2 class="h5 mb-0"><i class="bi bi-calculator"></i> Resultado da simulação</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="secao-total mt-3">
+                            <div class="d-flex justify-content-between align-items-center p-2">
+                                <span class="fw-bold"><i class="bi bi-cash-stack"></i> TOTAL - IMPOSTO</span>
+                                <span id="totalImpostos" class="fw-bold">R$ 0,00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <div class="me-5 d-none d-lg-block">
+                <span><i class="bi bi-share-fill me-2"></i>Conecte-se conosco nas redes sociais:</span>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/escritorioranicont" class="me-4 text-reset">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/escritoriocontabilranicont/" class="me-4 text-reset">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <a class="navbar-brand marca" href="#">
+                            <img src="/img/logo.png" alt="Logo" class="img-fluid" width="100">
+                        </a>
+                        <p class="mt-4">
+                            <i class="bi bi-info-circle me-2"></i>Simulador de apuração do Simples Nacional desenvolvido para facilitar o entendimento dos tributos devidos pelas empresas optantes pelo Simples Nacional.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="bi bi-envelope me-2"></i>Contato
+                        </h6>
+                        <p class="contact-info"><i class="bi bi-geo-alt"></i> Av. Prof. Célso Ferreira da Silva, 786 - Jardim Europa 1 - Avaré, SP</p>
+                        <p class="contact-info">
+                            <i class="bi bi-envelope"></i>
+                            fiscal@ranicont.com.br | contato@ranicont.com.br
+                        </p>
+                        <p class="contact-info"><i class="bi bi-telephone"></i> 14 99610-0465 | 14 3731-2017 </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="text-center p-4 copyright">
+            <i class="bi bi-c-circle me-2"></i>Desenvolvido por <a class="text-reset fw-bold" href="https://www.instagram.com/vinimx_1/">Marcos Vinícius Marcolino Rocha Rocha</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script type="module" src="js/animacaoBotoes.js"></script>
+    <script type="module" src="js/anexos.js"></script>
+    <script type="module" src="js/formatarMoeda.js"></script>
+    <script type="module" src="js/calculoImposto.js"></script>
+</body>
+</html>

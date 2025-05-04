@@ -64,4 +64,6 @@ Planejo continuar aprimorando esta ferramenta com:
 
 ---
 
+Licença Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
 *Este projeto foi desenvolvido como parte do meu aprendizado e experiência profissional, visando criar uma ferramenta útil para o mercado contábil.* 
